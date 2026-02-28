@@ -1,65 +1,124 @@
 # Minpro-1 PAB
 
 # 1. Deskripsi Aplikasi
+Aplikasi ini merupakan sistem manajemen asrama berbasis mobile yang dibuat menggunakan Flutter, dengan tujuan mempermudah pengelolaan data penghuni, kamar, dan keuangan asrama. Aplikasi ini terdiri dari beberapa modul utama, yaitu Penghuni, Kamar, dan Keuangan/Tagihan, yang terintegrasi dalam satu halaman utama menggunakan BottomNavigationBar untuk navigasi.
+
+Pada modul Penghuni, pengguna dapat menambahkan, mengedit, dan menghapus data penghuni secara dinamis. Setiap penghuni memiliki atribut penting seperti nama, NIM, NIK, nomor HP, kamar, dan universitas. Fitur validasi memastikan NIK unik, nomor HP minimal 11 digit, dan NIK tepat 16 digit. Untuk meningkatkan pengalaman pengguna, interaksi penting seperti tambah, edit, dan hapus menampilkan dialog konfirmasi serta SnackBar berwarna hijau atau merah yang muncul dari bawah layar.
+
+Modul Kamar menampilkan daftar kamar dengan jumlah penghuni dan kapasitas yang tersisa. Status kamar ditandai menggunakan Chip berwarna merah jika penuh atau hijau jika tersedia, sehingga memudahkan pemantauan kapasitas setiap kamar.
+
+Sementara itu, modul Keuangan/Tagihan menghitung tunggakan iuran per bulan berdasarkan data pembayaran terakhir penghuni. Status pembayaran ditampilkan sebagai LUNAS atau MENUNGGAK, dan pengguna dapat memperbarui pembayaran menggunakan dialog interaktif yang menyesuaikan bulan dan tahun terakhir bayar.
+
+Secara keseluruhan, aplikasi ini menyediakan tampilan yang bersih dan intuitif dengan penggunaan Scaffold, Card, ListTile, Form, TextFormField, DropdownButtonFormField, dan SnackBar, sehingga pengelolaan data asrama menjadi lebih efisien, terstruktur, dan mudah diakses.
 
 # 2. Fitur Aplikasi
 ## A. Halaman Penghuni
-
+Pada halaman ini memuat dan menampilkan daftar penghuni. pada page ini juga terdapat beberapa fitur seperti tambah data penghuni baru, edit data penghuni dan hapus data penghuni
 <img width="685" height="907" alt="image" src="https://github.com/user-attachments/assets/814743d1-cac1-44ae-937c-93a5786fb1fb" />
 
 ### a. Tambah Data Penghuni 
 
 <img width="685" height="907" alt="image" src="https://github.com/user-attachments/assets/814743d1-cac1-44ae-937c-93a5786fb1fb" />
 
+- Fitur yang pertama yanitu tambah data penghuni, untuk menggunakan fitur ini terdapat floating button dengan ikon ( + ) pada bagian kanan bawah halaman dan tekan untuk masuk ke fitur tambah penghuni.
+
 <img width="683" height="906" alt="image" src="https://github.com/user-attachments/assets/ef6ea46b-42d3-4c8b-9806-e47ee6d6a19f" />
+
+- Setelah menekan button di page data penghuni otomatis akan berpindah ke form page untuk menambah data penghuni baru. Terdapat kolom informasi data penghuni yang dapat di isi seperti nama, nim, no hp, nik, kampus, dan memilih kamar.
+
 
 <img width="684" height="907" alt="image" src="https://github.com/user-attachments/assets/5aec6c71-c17d-4455-b39f-b799b2c151a5" />
 
+- Bagian pemilihan kamar berbentuk dropdown no kamar A1 - B3 dan terdapat informasi jumlah penghuni di kamar-kamar tersebut.
+
+
 <img width="682" height="910" alt="image" src="https://github.com/user-attachments/assets/2f2b0a00-786f-4f41-8ff9-8b718bf22676" />
 
+- Terdapat validator inpoutan dengan kriteria yang berbeda disetiap kolom formnya seperti nim yang wajib berupa angka, nomor hp minimal 11 digit, dan nik wajib 16 digit.
+  
 <img width="685" height="910" alt="image" src="https://github.com/user-attachments/assets/18aa29a1-d45c-4758-8653-483ae0a6389c" />
+
+- Untuk nik terdapat validator inputan yang membatasi setiap nik dari penghuni tidak boleh sama dan jika tidak sesuai dengan kriteria validator maka data tidak akan bisa disimpan dan muncul chip (pesan sementara) berwarna merah pada bagian bawah halaman.
+
 
 <img width="682" height="907" alt="image" src="https://github.com/user-attachments/assets/b8e6a2d0-f155-47e9-8b80-0349d2b89a33" />
 
+- Pada bagian kamar juga terdapat validator yang membatasi satu kamar hanya dapat diisi oleh 2 orang dan tidak boleh lebih, jika melebihi wajib memilih kamar yang lain.
+
 <img width="683" height="904" alt="image" src="https://github.com/user-attachments/assets/e52695e2-a816-488a-8a25-6b83ad5171d3" />
+  
+- Setelah semua form inputan telah diisi dengan benar, tekan tombol simpan dan akan muncul pop up message sebagai validasi terakhir sebelum menambahkan data penghuni baru, jika menekan batal maka proses akan dihentikan dan jika menekan tombol tambah maka data penghuni baru akan ditambahkan.
+
 
 <img width="684" height="907" alt="image" src="https://github.com/user-attachments/assets/666f2bd1-cae6-46e0-af1a-a078f63b481f" />
+
+- gambar di bawah ini adalah tampilan setelah berhasil melakukan penambahan data penghuni yang baru, akan muncul chip (widgett pesan sementara) berwarna hijau yang menandakan proses penambahan penghuni baru telah berhasil.
 
 ### b. Edit Data Penghuni
 
 <img width="682" height="213" alt="image" src="https://github.com/user-attachments/assets/4e91779a-a0d8-4b53-aa0a-4cbe5a40ac53" />
 
+- Selanjutnya ada fitur edit data penghuni yang dapat dilakukan dengan menekan tombol bergambarkan pensil seperti pada gambar di bawah ini.
+
+
 <img width="685" height="909" alt="image" src="https://github.com/user-attachments/assets/d098db80-17b2-43e0-a89a-c875083d064d" />
+
+- Setelah menekan ikon bergambarkan pensil pengguna otomatis akan masuk ke fotur edit data pengguna yang tampilannya sama seperti saat menambahkan pengguna baru.
+
 
 <img width="684" height="907" alt="image" src="https://github.com/user-attachments/assets/ed954e21-e199-406a-b7fc-fe67200301be" />
 
+- Fitur edit ini juga memiliki validator inputan yang sama seperti saat menambah data baru, jadi isi dengan benar untuk melakukan perubahan.
+
+
 <img width="684" height="910" alt="image" src="https://github.com/user-attachments/assets/4c75f7a4-692d-4fbd-a247-a6e1fc4033cb" />
+
+- Jika semua data sudah benar akan muncul pop up message sebagai validator terakhir sebelum melakukan perubahan data, tekan tombol batal unutk membatalkan dan tekan tombol edit untuk melakukan perubahan.
 
 <img width="682" height="911" alt="image" src="https://github.com/user-attachments/assets/e7913213-7d11-4f9e-be29-8a2571f66c9c" />
 
+- Setelah berhasil melakukan perubahan data pengguna akan beralih kembali ke halaman data penghuni. Dapat dilihat data penghuni yang sbeelumnya di edit telah mengalami perubahan.
+
+
 ### c. Hapus Data Penghuni
+
 
 <img width="680" height="146" alt="image" src="https://github.com/user-attachments/assets/e5cbd45d-1008-4283-8e19-c0da2fc50b2e" />
 
+- Selanjutnya ada fitur hapus data penghuni, untuk menjalankan fitur ini pengguna cukup menekan tombol dengan ikon tong sampah disebelah tombol untuk melakukan fitur edit.
+
+
 <img width="686" height="909" alt="image" src="https://github.com/user-attachments/assets/3470dd0f-a6d2-46f4-b82d-f08ad26b750c" />
+
+- Setelah menekan tombol muncul pop up message sebagai validator apakah pengguna benar-benar ingin menghapus data penghuni atau tidak, jika ingin menghapus data penghuni tekan tombol hapus dan jika tidak tekan tombol batal.
+
 
 <img width="683" height="911" alt="image" src="https://github.com/user-attachments/assets/f7a1e042-ec7c-4471-aece-72b7f10d3bb7" />
 
+- Gambar dibawha ini adlaah tampilan setelah menjalankan fitur hapus data penghuni, dapat dilihat data penghuni yang ingin dihapus sebelumnya telah menghilang ditandai dengan menculnya scaffoldmessanger pada bagian bawah halaman yang menandakan proses penghapusan berhasil.
+
 ## B. Halaman Kamar
+Pada halaman ini terdapat informasi mengenai kamar yang ada di asrama, informasinya meliputi nama kamar, jumlah penghuni disetiap kamarnya, kamar yang tersedia berwarna hijau dan berwarna merah jika kamar penuh.
 
 <img width="682" height="908" alt="image" src="https://github.com/user-attachments/assets/98952b5d-ccc2-44c3-a361-db32310763b6" />
 
 ## C. Halaman Keuangan
+Pada halaman keuangan terdapat data penghuni asrama seperti nama, nomor kamar, bulan terakhir membauar spp, jumlah tunggakan, dan status pembayarannya. Tunggakan dihitung berdasarkan tahun dan bulan terakhir si penghuni ini melakukan pembayaran dan tagihan perbulannya adalah Rp150.000. Pengguna dapat memperbarui waktu pembayaran terakhir penghuni dengan menekan tombol ber-ikon pensi berwarna hijau.
 
 <img width="683" height="907" alt="image" src="https://github.com/user-attachments/assets/9306a553-57dc-499d-a5f0-ea245d436e38" />
 
 ### a. Update Pembayaran Penghuni
+<img width="682" height="219" alt="image" src="https://github.com/user-attachments/assets/3120546e-4aca-4e46-912d-8718c5e12c97" />
 
-<img width="682" height="218" alt="image" src="https://github.com/user-attachments/assets/df39fadc-7027-4627-b152-5202ef88248f" />
+- Terdapat tombol dengan ikon pensil berwarna hijau pada card setiap penghuni, pilih penghuni yang ingin diperbarui waktu pembayarannya dengan menekan tombol tersebut.
 
 <img width="684" height="912" alt="image" src="https://github.com/user-attachments/assets/e229aa09-ed11-45c9-b50b-550bb181f48b" />
 
-<img width="682" height="219" alt="image" src="https://github.com/user-attachments/assets/3120546e-4aca-4e46-912d-8718c5e12c97" />
+- Setelah ditekan pengguna dapat memperbarui waktu pembayaran dengan memilih bulan dan tahun penghuni melakukan pembayaran, jika sudah selesai memlih bulan dan tahun teka simpan untuk melakukan perbaruan waktu pembayaran.
+
+<img width="682" height="218" alt="image" src="https://github.com/user-attachments/assets/df39fadc-7027-4627-b152-5202ef88248f" />
+
+- Tunggakan dan status pembayaran akan berubah jika si penghuni sudah tidak memiliki tagihan yang belum terbayar.
 
 # 3. Penggunaan Widget
 ## A. Widget Halaman Penghuni
