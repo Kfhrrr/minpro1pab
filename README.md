@@ -62,5 +62,9 @@
 <img width="682" height="219" alt="image" src="https://github.com/user-attachments/assets/3120546e-4aca-4e46-912d-8718c5e12c97" />
 
 # 3. Penggunaan Widget
+## A. Widget Halaman Penghuni
+## B. Widget Halaman Kamar
+## C. Widget Halaman Keuangan
+## D. Widget Main Page
 
 # 4. Tampilan Keseluruhan
