@@ -38,7 +38,7 @@ Pada halaman ini memuat dan menampilkan daftar penghuni. pada page ini juga terd
   
 <img width="685" height="910" alt="image" src="https://github.com/user-attachments/assets/18aa29a1-d45c-4758-8653-483ae0a6389c" />
 
-- Untuk nik terdapat validator inputan yang membatasi setiap nik dari penghuni tidak boleh sama dan jika tidak sesuai dengan kriteria validator maka data tidak akan bisa disimpan dan muncul chip (pesan sementara) berwarna merah pada bagian bawah halaman.
+- Untuk nik terdapat validator inputan yang membatasi setiap nik dari penghuni tidak boleh sama dan jika tidak sesuai dengan kriteria validator maka data tidak akan bisa disimpan dan muncul pesan sementara berwarna merah pada bagian bawah halaman.
 
 
 <img width="682" height="907" alt="image" src="https://github.com/user-attachments/assets/b8e6a2d0-f155-47e9-8b80-0349d2b89a33" />
@@ -52,7 +52,7 @@ Pada halaman ini memuat dan menampilkan daftar penghuni. pada page ini juga terd
 
 <img width="684" height="907" alt="image" src="https://github.com/user-attachments/assets/666f2bd1-cae6-46e0-af1a-a078f63b481f" />
 
-- gambar di bawah ini adalah tampilan setelah berhasil melakukan penambahan data penghuni yang baru, akan muncul chip (widgett pesan sementara) berwarna hijau yang menandakan proses penambahan penghuni baru telah berhasil.
+- gambar di bawah ini adalah tampilan setelah berhasil melakukan penambahan data penghuni yang baru, akan muncul widgett pesan sementara berwarna hijau yang menandakan proses penambahan penghuni baru telah berhasil.
 
 ### b. Edit Data Penghuni
 
@@ -98,7 +98,7 @@ Pada halaman ini memuat dan menampilkan daftar penghuni. pada page ini juga terd
 - Gambar dibawha ini adlaah tampilan setelah menjalankan fitur hapus data penghuni, dapat dilihat data penghuni yang ingin dihapus sebelumnya telah menghilang ditandai dengan menculnya scaffoldmessanger pada bagian bawah halaman yang menandakan proses penghapusan berhasil.
 
 ## B. Halaman Kamar
-Pada halaman ini terdapat informasi mengenai kamar yang ada di asrama, informasinya meliputi nama kamar, jumlah penghuni disetiap kamarnya, kamar yang tersedia berwarna hijau dan berwarna merah jika kamar penuh.
+Pada halaman ini terdapat informasi mengenai kamar yang ada di asrama, informasinya meliputi nama kamar, jumlah penghuni disetiap kamarnya, kamar yang tersedia memiliki chip berwarna hijau  dan chip berwarna merah jika kamar penuh.
 
 <img width="682" height="908" alt="image" src="https://github.com/user-attachments/assets/98952b5d-ccc2-44c3-a361-db32310763b6" />
 
